@@ -1,0 +1,33 @@
+# Eclipse project files
+.settings
+.classpath
+.project
+.metadata
+
+# IntelliJ Idea project files
+target/
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Netbeans project files
+nbproject
+
+# Always ignore these directories/files
+target
+logs
+antarcticle-view/antarcticle-web-view/overlays
+
+# Maven release plugin files
+release.properties
+pom.xml.releaseBackup
+
+# Android files
+gen
+build.xml
+local.properties
+proguard-project.txt
+project.properties
+ant.properties
+src/main/test/java/

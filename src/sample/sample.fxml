@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <center>
+        <TabPane prefHeight="396.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Сервер">
+                    <content>
+                        <Pane prefHeight="200.0" prefWidth="600.0">
+                            <children>
+                                <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#onConnectClient" text="Connect Client" />
+                                <Button layoutX="170.0" layoutY="48.0" mnemonicParsing="false" onAction="#sendASdu" text="Send Client" />
+                                <Button layoutX="8.0" layoutY="48.0" mnemonicParsing="false" onAction="#disconnectClient" text="Disconnect Client" />
+                                <Button layoutX="170.0" layoutY="14.0" mnemonicParsing="false" onAction="#onConnectServer" text="Connect Server" />
+                                <Button layoutX="170.0" layoutY="85.0" mnemonicParsing="false" onAction="#disconnectServer" text="Disconnect Server" />
+                                <TextField fx:id="inputValue" layoutX="272.0" layoutY="48.0" prefHeight="26.0" prefWidth="101.0" />
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab text="Клиент">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0" />
+                    </content>
+                </Tab>
+                <Tab text="Журнал сообщений">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0" />
+                    </content>
+                </Tab>
+
+            </tabs>
+        </TabPane>
+    </center>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <bottom>
+        <TextArea fx:id="message" editable="false" prefHeight="107.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+    </bottom>
+    <left>
+        <TreeView prefHeight="396.0" prefWidth="169.0" BorderPane.alignment="CENTER" />
+    </left>
+</BorderPane>
