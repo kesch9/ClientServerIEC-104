@@ -8,33 +8,36 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <center>
-        <TabPane prefHeight="396.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <TabPane prefHeight="396.0" prefWidth="600.0" style="-fx-border-color: blsck;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab text="Сервер">
                     <content>
                         <Pane prefHeight="200.0" prefWidth="600.0">
                             <children>
-                                <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#onConnectClient" text="Connect Client" />
-                                <Button layoutX="170.0" layoutY="48.0" mnemonicParsing="false" onAction="#sendASdu" text="Send Client" />
-                                <Button layoutX="8.0" layoutY="48.0" mnemonicParsing="false" onAction="#disconnectClient" text="Disconnect Client" />
-                                <Button layoutX="170.0" layoutY="14.0" mnemonicParsing="false" onAction="#onConnectServer" text="Connect Server" />
-                                <Button layoutX="170.0" layoutY="85.0" mnemonicParsing="false" onAction="#disconnectServer" text="Disconnect Server" />
-                                <TextField fx:id="inputValue" layoutX="272.0" layoutY="48.0" prefHeight="26.0" prefWidth="101.0" />
+                                <Button layoutX="8.0" layoutY="48.0" mnemonicParsing="false" onAction="#sendASdu" text="Send Client" />
+                                <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#onConnectServer" text="Connect Server" />
+                                <Button layoutX="8.0" layoutY="85.0" mnemonicParsing="false" onAction="#disconnectServer" text="Disconnect Server" />
+                                <TextField fx:id="inputValue" layoutX="108.0" layoutY="48.0" prefHeight="26.0" prefWidth="101.0" />
                             </children>
                         </Pane>
                     </content>
                 </Tab>
                 <Tab text="Клиент">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0" />
-                    </content>
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                         <Button layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#onConnectClient" text="Connect Client" />
+                         <Button layoutX="8.0" layoutY="48.0" mnemonicParsing="false" onAction="#disconnectClient" text="Disconnect Client" />
+                        <Button layoutX="8.0" layoutY="83.0" mnemonicParsing="false" onAction="#sendOBD" text="ОБД" />
+                     </children>
+                  </Pane>
+               </content>
                 </Tab>
                 <Tab text="Журнал сообщений">
                     <content>
@@ -67,9 +70,20 @@
         </MenuBar>
     </top>
     <bottom>
-        <TextArea fx:id="message" editable="false" prefHeight="107.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+        <TextArea fx:id="message" editable="false" prefHeight="107.0" prefWidth="800.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER" />
     </bottom>
     <left>
-        <TreeView prefHeight="396.0" prefWidth="169.0" BorderPane.alignment="CENTER" />
+
     </left>
+   <left>
+
+         <!--<children>-->
+            <!--<MenuButton layoutX="1.0" layoutY="1.0" prefHeight="26.0" prefWidth="198.0" text="Сервер">-->
+            <!--</MenuButton>-->
+            <!--<MenuButton layoutX="1.0" layoutY="27.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="198.0" text="Клиент">-->
+              <!--<Pane />-->
+            <!--</MenuButton>-->
+         <!--</children>-->
+
+   </left>
 </BorderPane>
